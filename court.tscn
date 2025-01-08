@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bs8fjd0yhimnu"]
+
+[node name="Court" type="CanvasLayer"]
+
+[node name="Divider" type="Line2D" parent="."]
+position = Vector2(576, 0)
+points = PackedVector2Array(-2, -2, -2, 646)
+default_color = Color(0.0156863, 0.784314, 0.988235, 1)

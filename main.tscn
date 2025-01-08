@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqo8g6n5iq2nc"]
+
+[ext_resource type="PackedScene" uid="uid://dqsoaeycesxcc" path="res://paddle.tscn" id="1_n8q6u"]
+[ext_resource type="Script" path="res://main.gd" id="1_rtn0d"]
+[ext_resource type="PackedScene" uid="uid://bs8fjd0yhimnu" path="res://court.tscn" id="2_u1ru3"]
+[ext_resource type="PackedScene" uid="uid://beq68ljjr3d8h" path="res://ball.tscn" id="3_72iwm"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_rtn0d")
+
+[node name="Court" parent="." instance=ExtResource("2_u1ru3")]
+
+[node name="PaddlePlayer1" parent="." instance=ExtResource("1_n8q6u")]
+position = Vector2(27, 103)
+up_key = "move_up_1"
+down_key = "move_down_1"
+
+[node name="PaddlePlayer2" parent="." instance=ExtResource("1_n8q6u")]
+position = Vector2(1122, 105)
+side = 2
+up_key = "move_up_2"
+down_key = "move_down_2"
+
+[node name="Ball" parent="." instance=ExtResource("3_72iwm")]
+
+[node name="Paddle1StartPos" type="Marker2D" parent="."]
+
+[node name="Paddle2StartPos" type="Marker2D" parent="."]
+position = Vector2(1152, 324)
